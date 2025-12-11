@@ -46,6 +46,7 @@
             max-width: 450px;
             text-align: center;
             border: 2px solid #007bff;
+            position: relative; /* Esencial para posicionar el widget de donación */
         }
         h1 {
             color: #00ffc8;
@@ -132,10 +133,56 @@
             font-size: 1.2em;
             font-style: italic;
         }
+
+        /* --- NUEVOS ESTILOS PARA EL WIDGET DE DONACIÓN --- */
+        .donation-widget {
+            position: absolute;
+            top: 5px; /* Ajusta la distancia desde arriba */
+            left: 5px; /* Ajusta la distancia desde la izquierda */
+            text-align: center;
+            z-index: 10; /* Asegura que esté por encima de otros elementos */
+        }
+        
+        .donate-btn {
+            display: block;
+            border: 2px solid #007bff; /* Borde del botón */
+            border-radius: 50%;
+            overflow: hidden;
+            width: 40px; /* Tamaño del botón */
+            height: 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.2s;
+            line-height: 0; /* Corrige espacio extra debajo de la imagen */
+        }
+
+        .donate-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .donate-btn:hover {
+            opacity: 0.8;
+        }
+
+        .donate-text {
+            color: #007bff; /* Color azul para el texto */
+            font-size: 0.75em; /* Tamaño de letra pequeño */
+            margin-top: 3px;
+            font-weight: bold;
+            text-shadow: none; /* Quitamos la sombra para que el azul sea más brillante */
+        }
+        /* ------------------------------------------------ */
     </style>
 </head>
 <body>
     <div class="main-container">
+        <div class="donation-widget">
+            <a href="https://www.paypal.com/donate/?hosted_button_id=M6XM4N2GRYYZS" target="_blank" class="donate-btn" title="Donar a David Extreme">
+                <img src="https://i.postimg.cc/zfLzw2Mv/channels4-profile.jpg" alt="Donar">
+            </a>
+            <span class="donate-text">Donar :)</span>
+        </div>
         <h1>DX GAMES</h1>
         <h2>SELECCIONAR JUEGOS</h2>
         <div class="menu">
