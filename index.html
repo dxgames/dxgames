@@ -134,7 +134,7 @@
             font-style: italic;
         }
 
-        /* --- NUEVOS ESTILOS PARA EL WIDGET DE DONACIÓN --- */
+        /* --- ESTILOS PARA EL WIDGET DE DONACIÓN --- */
         .donation-widget {
             position: absolute;
             top: 5px; /* Ajusta la distancia desde arriba */
@@ -173,6 +173,62 @@
             text-shadow: none; /* Quitamos la sombra para que el azul sea más brillante */
         }
         /* ------------------------------------------------ */
+
+        /* --- ESTILOS PARA EL APARTADO SÍGUENOS --- */
+        .social-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #007bff;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #007bff; /* Color azul para el texto de redes */
+            transition: transform 0.2s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px); /* Pequeño efecto de levantamiento */
+        }
+
+        .social-link-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px; /* Cuadrado con bordes redondeados */
+            overflow: hidden;
+            border: 2px solid #fff; /* Borde blanco alrededor del icono */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .social-link:hover .social-link-icon {
+             box-shadow: 0 4px 12px #007bff; /* Sombra azul al pasar el ratón */
+        }
+
+        .social-link-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-text {
+            font-size: 0.9em;
+            margin-top: 5px;
+            font-weight: bold;
+            text-shadow: none;
+        }
+        /* ------------------------------------------------ */
     </style>
 </head>
 <body>
@@ -198,6 +254,25 @@
                 ¡Más juegos próximamente!
             </div>
         </div>
-    </div>
+
+        <div class="social-section">
+            <h2>¡SÍGUENOS!</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61584974510654" target="_blank" class="social-link" title="Síguenos en Facebook">
+                    <div class="social-link-icon">
+                        <img src="https://i.postimg.cc/4xVBSV05/Facebook-Logo-(2019).png" alt="Facebook">
+                    </div>
+                    <span class="social-text">Facebook</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@dxgamesofficial?_r=1&_t=ZS-927vEPKIvAd" target="_blank" class="social-link" title="Síguenos en TikTok">
+                    <div class="social-link-icon">
+                        <img src="https://i.postimg.cc/XYtXpyNz/images-(11).jpg" alt="TikTok">
+                    </div>
+                    <span class="social-text">TikTok</span>
+                </a>
+            </div>
+        </div>
+        </div>
 </body>
 </html>
