@@ -110,7 +110,7 @@
             text-shadow: none;
         }
         
-        /* Estilo para el botón Víborita Cósmica (NUEVO) */
+        /* Estilo para el botón Víborita Cósmica */
         .viboritacosmica {
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/nhBJ2XQZ/viboritacosmica.jpg');
             background-size: cover;
@@ -128,16 +128,45 @@
             font-weight: bold;
             text-shadow: none;
         }
+        
+        /* --- NUEVO ESTILO: DUST & DRAW --- */
+        .dust-draw {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/G29G0wmK/previsualizacion.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #dc3545; /* Color de destaque Rojo */
+        }
+
+        .dust-draw span {
+            /* Contenedor del texto para destacarlo sobre la imagen */
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #dc3545; /* Texto a juego */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: none;
+        }
+        /* ---------------------------------- */
 
         /* Estilo para la opción No Seleccionable */
         .coming-soon-box {
+            margin-top: 15px; /* Espacio extra debajo de los juegos */
             background-color: #343a40; /* Gris oscuro para no seleccionable */
             color: #adb5bd;
             border: 3px dashed #6c757d; /* Borde punteado para indicar que no es activo */
             cursor: default;
             font-size: 1.2em;
             font-style: italic;
+            height: 60px; /* Reducimos la altura para el mensaje simple */
+            line-height: 60px; /* Centra verticalmente el texto */
         }
+        
+        /* Eliminamos el .menu .coming-soon-box ya que lo movemos fuera del .menu */
+        .menu + .coming-soon-box { /* Estilo para cuando está después del menú, si se desea */
+             margin-top: 15px;
+        }
+
 
         /* --- ESTILOS PARA EL WIDGET DE DONACIÓN --- */
         .donation-widget {
@@ -254,10 +283,14 @@
             <a href="https://dxgames.github.io/ViboritaCosmica/" target="_blank" class="game-box viboritacosmica">
                 <span>VIBORITA CÓSMICA</span>
             </a>
-
-            <div class="game-box coming-soon-box">
-                ¡Más juegos próximamente!
-            </div>
+            
+            <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw">
+                <span>DUST & DRAW</span>
+            </a>
+        </div>
+        
+        <div class="game-box coming-soon-box">
+            ¡Más juegos próximamente!
         </div>
 
         <div class="social-section">
