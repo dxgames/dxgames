@@ -33,7 +33,7 @@
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            /* CONFIGURACIÓN DE IMAGEN DE FONDO (PRIMERA IMAGEN) */
+            /* CONFIGURACIÓN DE IMAGEN DE FONDO */
             background-image: url('https://i.postimg.cc/5t5f4XxX/dxgames.png');
             background-size: cover;
             background-position: center;
@@ -51,7 +51,7 @@
             max-width: 450px;
             text-align: center;
             border: 2px solid #007bff;
-            position: relative; /* Esencial para posicionar el widget de donación */
+            position: relative;
         }
         h1 {
             color: #00ffc8;
@@ -77,18 +77,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 120px; /* Altura fija para el cuadro */
+            height: 120px;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            text-decoration: none; /* Quita el subrayado de los enlaces */
+            text-decoration: none;
             position: relative;
             transition: transform 0.2s ease;
         }
 
         .game-box:hover {
             transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7); /* Sombra azul al pasar el ratón */
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
         }
 
         /* Estilo para el botón Extreme Treasures */
@@ -96,11 +96,10 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/90kh8TBp/Extreme_Treasures.png');
             background-size: cover;
             background-position: center;
-            border: 3px solid #00ffc8; /* Borde de color de destaque */
+            border: 3px solid #00ffc8;
         }
 
         .extreme-treasures span {
-            /* Contenedor del texto para destacarlo sobre la imagen */
             background-color: rgba(0, 0, 0, 0.7);
             color: #00ffc8;
             padding: 10px 20px;
@@ -115,13 +114,12 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/nhBJ2XQZ/viboritacosmica.jpg');
             background-size: cover;
             background-position: center;
-            border: 3px solid #ffc107; /* Nuevo color de destaque amarillo/oro */
+            border: 3px solid #ffc107;
         }
 
         .viboritacosmica span {
-            /* Contenedor del texto para destacarlo sobre la imagen */
             background-color: rgba(0, 0, 0, 0.7);
-            color: #ffc107; /* Texto a juego */
+            color: #ffc107;
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 1.5em;
@@ -129,18 +127,35 @@
             text-shadow: none;
         }
         
-        /* --- NUEVO ESTILO: DUST & DRAW --- */
+        /* Estilo para DUST & DRAW */
         .dust-draw {
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/G29G0wmK/previsualizacion.jpg');
             background-size: cover;
             background-position: center;
-            border: 3px solid #dc3545; /* Color de destaque Rojo */
+            border: 3px solid #dc3545;
         }
 
         .dust-draw span {
-            /* Contenedor del texto para destacarlo sobre la imagen */
             background-color: rgba(0, 0, 0, 0.7);
-            color: #dc3545; /* Texto a juego */
+            color: #dc3545;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: none;
+        }
+
+        /* --- NUEVO ESTILO: DREADWATER --- */
+        .dreadwater {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/2jwwXnQ4/previsualizacion.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #00d4ff; /* Azul Neón/Agua */
+        }
+
+        .dreadwater span {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00d4ff; /* Texto a juego */
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 1.5em;
@@ -151,42 +166,36 @@
 
         /* Estilo para la opción No Seleccionable */
         .coming-soon-box {
-            margin-top: 15px; /* Espacio extra debajo de los juegos */
-            background-color: #343a40; /* Gris oscuro para no seleccionable */
+            margin-top: 15px;
+            background-color: #343a40;
             color: #adb5bd;
-            border: 3px dashed #6c757d; /* Borde punteado para indicar que no es activo */
+            border: 3px dashed #6c757d;
             cursor: default;
             font-size: 1.2em;
             font-style: italic;
-            height: 60px; /* Reducimos la altura para el mensaje simple */
-            line-height: 60px; /* Centra verticalmente el texto */
+            height: 60px;
+            line-height: 60px;
         }
         
-        /* Eliminamos el .menu .coming-soon-box ya que lo movemos fuera del .menu */
-        .menu + .coming-soon-box { /* Estilo para cuando está después del menú, si se desea */
-             margin-top: 15px;
-        }
-
-
         /* --- ESTILOS PARA EL WIDGET DE DONACIÓN --- */
         .donation-widget {
             position: absolute;
-            top: 5px; /* Ajusta la distancia desde arriba */
-            left: 5px; /* Ajusta la distancia desde la izquierda */
+            top: 5px;
+            left: 5px;
             text-align: center;
-            z-index: 10; /* Asegura que esté por encima de otros elementos */
+            z-index: 10;
         }
         
         .donate-btn {
             display: block;
-            border: 2px solid #007bff; /* Borde del botón */
+            border: 2px solid #007bff;
             border-radius: 50%;
             overflow: hidden;
-            width: 40px; /* Tamaño del botón */
+            width: 40px;
             height: 40px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             transition: opacity 0.2s;
-            line-height: 0; /* Corrige espacio extra debajo de la imagen */
+            line-height: 0;
         }
 
         .donate-btn img {
@@ -200,13 +209,12 @@
         }
 
         .donate-text {
-            color: #007bff; /* Color azul para el texto */
-            font-size: 0.75em; /* Tamaño de letra pequeño */
+            color: #007bff;
+            font-size: 0.75em;
             margin-top: 3px;
             font-weight: bold;
-            text-shadow: none; /* Quitamos la sombra para que el azul sea más brillante */
+            text-shadow: none;
         }
-        /* ------------------------------------------------ */
 
         /* --- ESTILOS PARA EL APARTADO SÍGUENOS --- */
         .social-section {
@@ -228,26 +236,26 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #007bff; /* Color azul para el texto de redes */
+            color: #007bff;
             transition: transform 0.2s ease;
         }
 
         .social-link:hover {
-            transform: translateY(-3px); /* Pequeño efecto de levantamiento */
+            transform: translateY(-3px);
         }
 
         .social-link-icon {
             width: 50px;
             height: 50px;
-            border-radius: 10px; /* Cuadrado con bordes redondeados */
+            border-radius: 10px;
             overflow: hidden;
-            border: 2px solid #fff; /* Borde blanco alrededor del icono */
+            border: 2px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transition: box-shadow 0.2s ease;
         }
         
         .social-link:hover .social-link-icon {
-             box-shadow: 0 4px 12px #007bff; /* Sombra azul al pasar el ratón */
+             box-shadow: 0 4px 12px #007bff;
         }
 
         .social-link-icon img {
@@ -262,7 +270,6 @@
             font-weight: bold;
             text-shadow: none;
         }
-        /* ------------------------------------------------ */
     </style>
 </head>
 <body>
@@ -286,6 +293,10 @@
             
             <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw">
                 <span>DUST & DRAW</span>
+            </a>
+
+            <a href="https://dxgames.github.io/DREADWATER/" target="_blank" class="game-box dreadwater">
+                <span>DREADWATER</span>
             </a>
         </div>
         
