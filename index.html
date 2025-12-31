@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DX GAMES: ¡LOS MEJORES JUEGOS PARA NAVEGADOR!</title>
 
-    <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
+    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
     <meta name="theme-color" content="#000000"> 
 
     <meta property="og:title" content="DX GAMES">
     <meta property="og:description" content="Página oficial de DX GAMES. ¡LOS MEJORES JUEGOS PARA NAVEGADOR!">
-    <meta property="og:url" content="https://TU-DOMINIO-DE-INDICE.netlify.app"> 
-    <meta property="og:image" content="https://i.postimg.cc/d3x51TjX/Previsualizacion.jpg">
+    <meta property="og:url" content="https://dxgames.github.io/"> 
+    <meta property="og:image" content="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@TUCUENTA"> 
-    <meta name="twitter:creator" content="@TUCUENTA">
     <meta name="twitter:title" content="DX GAMES">
-    <meta name="twitter:description" content="Página oficial de DX GAMES. ¡LOS MEJORES JUEGOS PARA NAVEGADOR!">
-    <meta name="twitter:image" content="https://i.postimg.cc/d3x51TjX/Previsualizacion.jpg">
+    <meta name="twitter:description" content="Página oficial de DX GAMES.">
+    <meta name="twitter:image" content="https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg">
 
     <style>
-        /* Estilos Base del Body y Contenedor */
+        /* Estilos Base */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -51,27 +48,12 @@
             text-align: center;
             border: 2px solid #007bff;
             position: relative;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
-        h1 {
-            color: #00ffc8;
-            margin-bottom: 5px;
-            font-size: 2.5em;
-        }
-        h2 {
-            font-size: 1.4em;
-            color: #fff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        h1 { color: #00ffc8; margin-bottom: 5px; font-size: 2.5em; }
+        h2 { font-size: 1.4em; color: #fff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-bottom: 30px; text-transform: uppercase; }
+        
+        .menu { display: flex; flex-direction: column; gap: 15px; }
         
         .game-box {
             display: flex;
@@ -82,107 +64,50 @@
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             text-decoration: none;
-            position: relative;
             transition: transform 0.2s ease;
         }
+        .game-box:hover { transform: scale(1.02); box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7); }
+        .game-box span { background-color: rgba(0, 0, 0, 0.7); padding: 10px 20px; border-radius: 5px; font-size: 1.5em; font-weight: bold; }
 
-        .game-box:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
-        }
-
-        .game-box span {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-shadow: none;
-        }
-
-        /* --- Estilos de los juegos --- */
-        .extreme-treasures {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/90kh8TBp/Extreme_Treasures.png');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #00ffc8;
-        }
+        /* Estilos de botones de juegos */
+        .extreme-treasures { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/90kh8TBp/Extreme_Treasures.png'); background-size: cover; background-position: center; border: 3px solid #00ffc8; }
         .extreme-treasures span { color: #00ffc8; }
 
-        .viboritacosmica {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/nhBJ2XQZ/viboritacosmica.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #ffc107;
-        }
+        .viboritacosmica { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/nhBJ2XQZ/viboritacosmica.jpg'); background-size: cover; border: 3px solid #ffc107; }
         .viboritacosmica span { color: #ffc107; }
-        
-        .dust-draw {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/G29G0wmK/previsualizacion.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #dc3545;
-        }
+
+        .dust-draw { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/G29G0wmK/previsualizacion.jpg'); background-size: cover; border: 3px solid #dc3545; }
         .dust-draw span { color: #dc3545; }
 
-        .dreadwater {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/2jwwXnQ4/previsualizacion.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #00d4ff; 
-        }
+        .dreadwater { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/2jwwXnQ4/previsualizacion.jpg'); background-size: cover; border: 3px solid #00d4ff; }
         .dreadwater span { color: #00d4ff; }
 
-        /* --- NUEVOS JUEGOS --- */
-        .relax-fishing {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #48cae4;
-        }
+        .relax-fishing { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/nVPfcJFB/previsualizacion.jpg'); background-size: cover; border: 3px solid #48cae4; }
         .relax-fishing span { color: #48cae4; }
 
-        .ajedrez-cosmico {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/JhDZSv4r/previsualizacion.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 3px solid #9d4edd;
-        }
+        .ajedrez-cosmico { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://i.postimg.cc/JhDZSv4r/previsualizacion.jpg'); background-size: cover; border: 3px solid #9d4edd; }
         .ajedrez-cosmico span { color: #9d4edd; }
 
-        .coming-soon-box {
-            margin-top: 15px;
-            background-color: #343a40;
-            color: #adb5bd;
-            border: 3px dashed #6c757d;
-            cursor: default;
-            font-size: 1.2em;
-            font-style: italic;
-            height: 60px;
-            line-height: 60px;
-        }
+        .coming-soon-box { margin-top: 15px; background-color: #343a40; color: #adb5bd; border: 3px dashed #6c757d; cursor: default; font-size: 1.2em; font-style: italic; height: 60px; line-height: 60px; }
         
         /* Widget y Social */
         .donation-widget { position: absolute; top: 5px; left: 5px; text-align: center; z-index: 10; }
-        .donate-btn { display: block; border: 2px solid #007bff; border-radius: 50%; overflow: hidden; width: 40px; height: 40px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); transition: opacity 0.2s; line-height: 0; }
+        .donate-btn { display: block; border: 2px solid #007bff; border-radius: 50%; overflow: hidden; width: 40px; height: 40px; }
         .donate-btn img { width: 100%; height: 100%; object-fit: cover; }
-        .donate-btn:hover { opacity: 0.8; }
-        .donate-text { color: #007bff; font-size: 0.75em; margin-top: 3px; font-weight: bold; text-shadow: none; }
+        .donate-text { color: #007bff; font-size: 0.75em; margin-top: 3px; font-weight: bold; }
 
         .social-section { margin-top: 30px; padding-top: 20px; border-top: 2px solid #007bff; width: 100%; }
         .social-icons { display: flex; justify-content: center; gap: 25px; margin-top: 15px; }
-        .social-link { text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #007bff; transition: transform 0.2s ease; }
-        .social-link:hover { transform: translateY(-3px); }
-        .social-link-icon { width: 50px; height: 50px; border-radius: 10px; overflow: hidden; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); }
-        .social-link:hover .social-link-icon { box-shadow: 0 4px 12px #007bff; }
+        .social-link { text-decoration: none; display: flex; flex-direction: column; align-items: center; color: #007bff; }
+        .social-link-icon { width: 50px; height: 50px; border-radius: 10px; overflow: hidden; border: 2px solid #fff; }
         .social-link-icon img { width: 100%; height: 100%; object-fit: cover; }
-        .social-text { font-size: 0.9em; margin-top: 5px; font-weight: bold; text-shadow: none; }
+        .social-text { font-size: 0.9em; margin-top: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="main-container">
         <div class="donation-widget">
-            <a href="https://www.paypal.com/donate/?hosted_button_id=M6XM4N2GRYYZS" target="_blank" class="donate-btn" title="Donar a David Extreme">
+            <a href="https://www.paypal.com/donate/?hosted_button_id=M6XM4N2GRYYZS" target="_blank" class="donate-btn">
                 <img src="https://i.postimg.cc/zfLzw2Mv/channels4-profile.jpg" alt="Donar">
             </a>
             <span class="donate-text">Donar :)</span>
@@ -190,49 +115,25 @@
         <h1>DX GAMES</h1>
         <h2>SELECCIONAR JUEGOS</h2>
         <div class="menu">
-            <a href="https://dxgames.github.io/Extreme-Treasures/" target="_blank" class="game-box extreme-treasures">
-                <span>EXTREME TREASURES</span>
-            </a>
-
-            <a href="https://dxgames.github.io/ViboritaCosmica/" target="_blank" class="game-box viboritacosmica">
-                <span>VIBORITA CÓSMICA</span>
-            </a>
-            
-            <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw">
-                <span>DUST & DRAW</span>
-            </a>
-
-            <a href="https://dxgames.github.io/DREADWATER/" target="_blank" class="game-box dreadwater">
-                <span>DREADWATER</span>
-            </a>
-
-            <a href="https://dxgames.github.io/relaxfishing/" target="_blank" class="game-box relax-fishing">
-                <span>RELAX FISHING</span>
-            </a>
-
-            <a href="https://dxgames.github.io/ajedrezcosmico/" target="_blank" class="game-box ajedrez-cosmico">
-                <span>AJEDREZ CÓSMICO</span>
-            </a>
+            <a href="https://dxgames.github.io/Extreme-Treasures/" target="_blank" class="game-box extreme-treasures"><span>EXTREME TREASURES</span></a>
+            <a href="https://dxgames.github.io/ViboritaCosmica/" target="_blank" class="game-box viboritacosmica"><span>VIBORITA CÓSMICA</span></a>
+            <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw"><span>DUST & DRAW</span></a>
+            <a href="https://dxgames.github.io/DREADWATER/" target="_blank" class="game-box dreadwater"><span>DREADWATER</span></a>
+            <a href="https://dxgames.github.io/relaxfishing/" target="_blank" class="game-box relax-fishing"><span>RELAX FISHING</span></a>
+            <a href="https://dxgames.github.io/ajedrezcosmico/" target="_blank" class="game-box ajedrez-cosmico"><span>AJEDREZ CÓSMICO</span></a>
         </div>
         
-        <div class="game-box coming-soon-box">
-            ¡Más juegos próximamente!
-        </div>
+        <div class="game-box coming-soon-box">¡Más juegos próximamente!</div>
 
         <div class="social-section">
             <h2>¡SÍGUENOS!</h2>
             <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61584974510654" target="_blank" class="social-link" title="Síguenos en Facebook">
-                    <div class="social-link-icon">
-                        <img src="https://i.postimg.cc/4xVBSV05/Facebook-Logo-(2019).png" alt="Facebook">
-                    </div>
+                <a href="https://www.facebook.com/profile.php?id=61584974510654" target="_blank" class="social-link">
+                    <div class="social-link-icon"><img src="https://i.postimg.cc/4xVBSV05/Facebook-Logo-(2019).png" alt="FB"></div>
                     <span class="social-text">Facebook</span>
                 </a>
-
-                <a href="https://www.tiktok.com/@dxgamesofficial?_r=1&_t=ZS-927vEPKIvAd" target="_blank" class="social-link" title="Síguenos en TikTok">
-                    <div class="social-link-icon">
-                        <img src="https://i.postimg.cc/XYtXpyNz/images-(11).jpg" alt="TikTok">
-                    </div>
+                <a href="https://www.tiktok.com/@dxgamesofficial?_r=1&_t=ZS-927vEPKIvAd" target="_blank" class="social-link">
+                    <div class="social-link-icon"><img src="https://i.postimg.cc/XYtXpyNz/images-(11).jpg" alt="TK"></div>
                     <span class="social-text">TikTok</span>
                 </a>
             </div>
