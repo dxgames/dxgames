@@ -17,7 +17,7 @@
 
     <link rel="apple-touch-icon" href="https://i.postimg.cc/rsNtTLrs/icono.jpg">
     <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/rsNtTLrs/icono.jpg">
-    <meta name="theme-color" content="#000000"> 
+    <meta name="theme-color" contDREADWATERent="#000000"> 
 
     <style>
         body {
@@ -34,6 +34,11 @@
             background-attachment: fixed;
             color: #fff;
             overflow: hidden;
+        }
+
+        /* REGLA MAESTRA PARA OCULTAR: Esto asegura que 'hidden' funcione siempre */
+        [hidden] {
+            display: none !important;
         }
 
         .main-container {
@@ -141,12 +146,18 @@
         
         <div class="menu">
             <a href="https://dxgames.github.io/Extreme-Treasures/" target="_blank" class="game-box extreme-treasures"><span>EXTREME TREASURES</span></a>
-            <a href="https://dxgames.github.io/ViboritaCosmica/" target="_blank" class="game-box viboritacosmica"><span>VIBORITA CÓSMICA</span></a>
-            <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw"><span>DUST & DRAW</span></a>
-            <a href="https://dxgames.github.io/DREADWATER/" target="_blank" class="game-box dreadwater"><span>DREADWATER</span></a>
-            <a href="https://dxgames.github.io/relaxfishing/" target="_blank" class="game-box relax-fishing"><span>RELAX FISHING</span></a>
-            <a href="https://dxgames.github.io/ajedrezcosmico/" target="_blank" class="game-box ajedrez-cosmico"><span>AJEDREZ CÓSMICO</span></a>
-            <a href="https://dxgames.github.io/pimpamrabbit/" target="_blank" class="game-box pimpamrabbit"><span>PIM-PAM-RABBIT</span></a>
+            
+            <a href="https://dxgames.github.io/ViboritaCosmica/" target="_blank" class="game-box viboritacosmica" hidden><span>VIBORITA CÓSMICA</span></a>
+            
+            <a href="https://dxgames.github.io/dust-draw/" target="_blank" class="game-box dust-draw" hidden><span>DUST & DRAW</span></a>
+            
+            <a href="https://dxgames.github.io/DREADWATER/" target="_blank" class="game-box dreadwater" hidden><span></span></a>
+            
+            <a href="https://dxgames.github.io/relaxfishing/" target="_blank" class="game-box relax-fishing" hidden><span>RELAX FISHING</span></a>
+            
+            <a href="https://dxgames.github.io/ajedrezcosmico/" target="_blank" class="game-box ajedrez-cosmico" hidden><span>AJEDREZ CÓSMICO</span></a>
+            
+            <a href="https://dxgames.github.io/pimpamrabbit/" target="_blank" class="game-box pimpamrabbit" hidden><span>PIM-PAM-RABBIT</span></a>
             
             <div class="coming-soon-box">¡Más juegos próximamente!</div>
         </div>
