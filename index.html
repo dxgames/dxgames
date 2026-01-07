@@ -17,7 +17,7 @@
 
     <link rel="apple-touch-icon" href="https://i.postimg.cc/rsNtTLrs/icono.jpg">
     <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/rsNtTLrs/icono.jpg">
-    <meta name="theme-color" contDREADWATERent="#000000"> 
+    <meta name="theme-color" content="#000000"> 
 
     <style>
         body {
@@ -36,7 +36,7 @@
             overflow: hidden;
         }
 
-        /* REGLA MAESTRA PARA OCULTAR: Esto asegura que 'hidden' funcione siempre */
+        /* REGLA MAESTRA PARA OCULTAR */
         [hidden] {
             display: none !important;
         }
@@ -137,6 +137,40 @@
         .footer-legal p { margin: 3px 0; }
         .footer-legal a { color: #adb5bd; text-decoration: none; transition: color 0.3s; }
         .footer-legal a:hover { color: #00ffc8; text-decoration: underline; }
+
+        /* === NUEVO ESTILO BOTÓN APP NEÓN === */
+        .btn-neon-app {
+            display: block;
+            width: 90%;
+            margin: 20px auto 10px auto; /* Centrado */
+            padding: 15px;
+            background-color: transparent;
+            border: 3px solid #00ffc8;
+            color: #00ffc8;
+            text-align: center;
+            font-size: 1.1em; /* Un pelín más pequeño para asegurar que quepa bien en móviles */
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 10px #00ffc8, inset 0 0 10px #00ffc8;
+            text-shadow: 0 0 5px #00ffc8;
+            animation: palpitar 1.5s infinite alternate;
+            transition: all 0.3s ease;
+            flex-shrink: 0; /* Evita que se aplaste si falta espacio */
+        }
+
+        .btn-neon-app:hover {
+            background-color: #00ffc8;
+            color: #000;
+            box-shadow: 0 0 25px #00ffc8, inset 0 0 25px #00ffc8;
+            transform: scale(1.05);
+        }
+
+        @keyframes palpitar {
+            from { box-shadow: 0 0 10px #00ffc8, inset 0 0 5px #00ffc8; }
+            to { box-shadow: 0 0 20px #00ffc8, inset 0 0 10px #00ffc8; }
+        }
     </style>
 </head>
 <body>
@@ -161,6 +195,10 @@
             
             <div class="coming-soon-box">¡Más juegos próximamente!</div>
         </div>
+
+        <a href="https://dxgames.github.io/dxgamesapp/" class="btn-neon-app">
+            ¡DESCARGA NUESTRA APP OFICIAL!
+        </a>
 
         <div class="social-section">
             <h2>¡SÍGUENOS Y APOYA!</h2>
